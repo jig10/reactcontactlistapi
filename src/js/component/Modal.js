@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -32,7 +32,11 @@ export const Modal = props => {
 						<button type="button" className="btn btn-primary">
 							Oh no!
 						</button>
-						<button type="button" className="btn btn-secondary" data-dismiss="modal">
+						<button
+							onClick={() => actions.deleteContact(id)}
+							type="button"
+							className="btn btn-secondary"
+							data-dismiss="modal">
 							Do it!
 						</button>
 					</div>

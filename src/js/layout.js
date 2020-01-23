@@ -4,9 +4,11 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 // import ScrollToTop from "./component/scrollToTop";
 
 import injectContext from "./store/appContext";
-
+import { Home } from "../js/views/home";
 import { Contacts } from "./views/Contacts.js";
 import { AddContact } from "./views/AddContact.js";
+import { EditContact } from "./views/EditContact.js";
+import { Test } from "../js/views/test";
 
 export const Layout = () => {
 	return (
@@ -17,8 +19,9 @@ export const Layout = () => {
 						<Route exact path="/index.html" component={Contacts} />
 						<Route exact path="/" component={Contacts} />
 						<Route exact path="/contacts" component={Contacts} />
+						<Route exact path="/home" component={Home} />
 						<Route exact path="/add" component={AddContact} />
-						<Route exact path="/edit" component={AddContact} />
+						<Route exact path="/edit/:id" component={EditContact} />
 						<Route render={() => <h1 className="notfound">Not found!</h1>} />
 					</Switch>
 				</div>

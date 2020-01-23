@@ -29,7 +29,7 @@ const injectContext = PassedComponent => {
 			 **/
 			state.actions.loadAgendaSlug();
 
-			let url = "https://assets.breatheco.de/apis/fake/contact/agenda/downtown_xii";
+			/**let url = "https://assets.breatheco.de/apis/fake/contact/agenda/downtown_xii";
 			let promis = fetch(url).then(response => response.json());
 			promis.then(results => {
 				let { store, actions } = state;
@@ -39,8 +39,8 @@ const injectContext = PassedComponent => {
 						...store,
 						contacts: results
 					}
-				});
-			});
+                	});
+			});**/
 		}, []);
 		// the initial value for the context its not null anymore, but the current state of this component,
 		// the context will have a getStore and setStore functions available then, because they were declared

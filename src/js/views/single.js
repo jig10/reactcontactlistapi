@@ -20,9 +20,9 @@ export class Single extends React.Component {
 				<hr className="my-4" />
 
 				<Link to="/">
-					<span className="btn btn-primary btn-lg" href="#" role="button">
+					<button className="btn btn-primary btn-lg" >
 						Back home
-					</span>
+					</button>
 				</Link>
 			</div>
 		);
